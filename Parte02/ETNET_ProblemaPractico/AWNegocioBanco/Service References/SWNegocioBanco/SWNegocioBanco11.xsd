@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal" />
+  <xs:complexType name="SucursalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal" base="q1:ENSucursal">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SucursalRequest" nillable="true" type="tns:SucursalRequest" />
+</xs:schema>

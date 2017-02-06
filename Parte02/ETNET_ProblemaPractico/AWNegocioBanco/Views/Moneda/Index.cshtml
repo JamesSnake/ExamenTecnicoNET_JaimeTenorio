@@ -1,0 +1,46 @@
+﻿@model AWNegocioBanco.Models.MonedaViewModel
+
+@{
+    ViewBag.Title = "Inidice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Moneda</h2>
+
+@*<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoMoneda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Abreviatura)
+        </th>
+        @*<th></th>*@
+    </tr>
+
+@foreach (var item in Model.ListaMoneda) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoMoneda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Abreviatura)
+        </td>
+        @*<td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CodigoMoneda }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Borrar", "Delete", new {  id=item.CodigoMoneda })
+        </td>*@
+    </tr>
+}
+
+</table>

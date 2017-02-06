@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed8820f8-1c09-4b1c-a529-342091c76f36" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="EntidadNegocio" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59608/SWNegocioBanco.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SWNegocioBanco.xsd" MetadataType="Schema" ID="ab09c4b8-ba31-4dbf-b35d-abc08348d8ad" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd8" />
+    <MetadataFile FileName="SWNegocioBanco1.xsd" MetadataType="Schema" ID="dce78096-5592-4f8d-921c-0c832c08b68f" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd0" />
+    <MetadataFile FileName="SWNegocioBanco2.xsd" MetadataType="Schema" ID="afdb070f-376d-4fca-8971-b0a5d3b840c8" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd4" />
+    <MetadataFile FileName="SWNegocioBanco.disco" MetadataType="Disco" ID="ef284bdb-dbb3-490e-bcb4-ae5572c60da0" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?disco" />
+    <MetadataFile FileName="SWNegocioBanco3.xsd" MetadataType="Schema" ID="aa37061b-6556-41d0-9d89-92491514d406" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd10" />
+    <MetadataFile FileName="SWNegocioBanco4.xsd" MetadataType="Schema" ID="dc6fd265-8c76-4a53-a100-b665e128ed5b" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd17" />
+    <MetadataFile FileName="SWNegocioBanco5.xsd" MetadataType="Schema" ID="33430e82-aaa1-4603-893a-d464b12935f6" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd9" />
+    <MetadataFile FileName="SWNegocioBanco6.xsd" MetadataType="Schema" ID="25679eea-c65b-47fa-a67a-7aa922e360be" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd1" />
+    <MetadataFile FileName="SWNegocioBanco7.xsd" MetadataType="Schema" ID="aae55f49-5c0f-43ba-b43d-73278e56ace7" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd5" />
+    <MetadataFile FileName="SWNegocioBanco8.xsd" MetadataType="Schema" ID="48fddbf7-1ad2-4b50-a96e-ce2dc9cd49d2" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd16" />
+    <MetadataFile FileName="SWNegocioBanco9.xsd" MetadataType="Schema" ID="1ada20e6-5a53-4527-a4eb-d6d2572c9e98" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd14" />
+    <MetadataFile FileName="SWNegocioBanco10.xsd" MetadataType="Schema" ID="86ccf097-f0c6-429c-8d0c-bcef56fc8dab" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd2" />
+    <MetadataFile FileName="SWNegocioBanco11.xsd" MetadataType="Schema" ID="01edfc4a-5a33-47fc-8866-cdb8f21a1de8" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd6" />
+    <MetadataFile FileName="SWNegocioBanco12.xsd" MetadataType="Schema" ID="96c7fa14-04bf-4176-b7ec-271eff059d7c" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd11" />
+    <MetadataFile FileName="SWNegocioBanco13.xsd" MetadataType="Schema" ID="817c9ba7-2d61-4979-a5a4-ae3d05b51d9a" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd12" />
+    <MetadataFile FileName="SWNegocioBanco14.xsd" MetadataType="Schema" ID="c2495bca-3f6f-40a9-bbdc-67289b11625f" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd15" />
+    <MetadataFile FileName="SWNegocioBanco15.xsd" MetadataType="Schema" ID="967500f2-2e97-4945-b682-9473f41a2b6a" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd3" />
+    <MetadataFile FileName="SWNegocioBanco16.xsd" MetadataType="Schema" ID="3adf80c9-ec03-43a3-884e-b5315dd0b86f" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd7" />
+    <MetadataFile FileName="SWNegocioBanco.wsdl" MetadataType="Wsdl" ID="11ce9cb7-6d3f-41c2-b728-56ff00cccbd1" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?wsdl" />
+    <MetadataFile FileName="SWNegocioBanco17.xsd" MetadataType="Schema" ID="ca65cacd-d748-4052-b686-c6729c45f8f4" SourceId="1" SourceUrl="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd13" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

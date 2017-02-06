@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.General" />
+  <xs:complexType name="EstadoResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/EntidadNegocio.General" base="q1:GeneralResponse">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado" minOccurs="0" name="ListaEstado" nillable="true" type="q2:ArrayOfENEstado" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EstadoResponse" nillable="true" type="tns:EstadoResponse" />
+</xs:schema>

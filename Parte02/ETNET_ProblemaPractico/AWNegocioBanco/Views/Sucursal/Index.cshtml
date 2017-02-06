@@ -1,0 +1,64 @@
+﻿@model AWNegocioBanco.Models.SucursalViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoSucursal)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CodigoBanco)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Banco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.ListaSucursal) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoSucursal)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CodigoBanco)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Banco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", item) |
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.CodigoSucursal */ }) |*@
+            @Html.ActionLink("Borrar", "Delete", item)
+        </td>
+    </tr>
+}
+
+</table>

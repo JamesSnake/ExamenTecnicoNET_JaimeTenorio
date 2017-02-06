@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SWNegocioBanco" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Request" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Response" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.General" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Response" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Request" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Response" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Request" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Response" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Request" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado" />
+      <xsd:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Response" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISWNegocioBanco_ConsultarBanco_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarBanco" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarBanco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarSucursal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSucursal" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarSucursal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarOrdenPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarOrdenPago" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarOrdenPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarOrdenPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarMoneda_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMoneda" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarMoneda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMonedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEstado" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ConsultarEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarBanco_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarBanco" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarBanco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarSucursal_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarSucursal" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarSucursal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarSucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarEstado" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarMoneda_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarMoneda" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarMoneda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarMonedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarOrdenPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarOrdenPago" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_RegistrarOrdenPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarOrdenPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarBanco_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarBanco" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarBanco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarSucursal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSucursal" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarSucursal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEstado" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarMoneda_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarMoneda" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarMoneda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarMonedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarOrdenPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarOrdenPago" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_ActualizarOrdenPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarOrdenPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarBanco_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarBanco" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarBanco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarSucursal_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSucursal" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarSucursal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEstado" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarMoneda_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarMoneda" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarMoneda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarMonedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarOrdenPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarOrdenPago" />
+  </wsdl:message>
+  <wsdl:message name="ISWNegocioBanco_EliminarOrdenPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarOrdenPagoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISWNegocioBanco">
+    <wsdl:operation name="ConsultarBanco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarBanco" message="tns:ISWNegocioBanco_ConsultarBanco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarBancoResponse" message="tns:ISWNegocioBanco_ConsultarBanco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSucursal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarSucursal" message="tns:ISWNegocioBanco_ConsultarSucursal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarSucursalResponse" message="tns:ISWNegocioBanco_ConsultarSucursal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarOrdenPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarOrdenPago" message="tns:ISWNegocioBanco_ConsultarOrdenPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarOrdenPagoResponse" message="tns:ISWNegocioBanco_ConsultarOrdenPago_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMoneda">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarMoneda" message="tns:ISWNegocioBanco_ConsultarMoneda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarMonedaResponse" message="tns:ISWNegocioBanco_ConsultarMoneda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarEstado" message="tns:ISWNegocioBanco_ConsultarEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ConsultarEstadoResponse" message="tns:ISWNegocioBanco_ConsultarEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarBanco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarBanco" message="tns:ISWNegocioBanco_RegistrarBanco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarBancoResponse" message="tns:ISWNegocioBanco_RegistrarBanco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSucursal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarSucursal" message="tns:ISWNegocioBanco_RegistrarSucursal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarSucursalResponse" message="tns:ISWNegocioBanco_RegistrarSucursal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarEstado" message="tns:ISWNegocioBanco_RegistrarEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarEstadoResponse" message="tns:ISWNegocioBanco_RegistrarEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMoneda">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarMoneda" message="tns:ISWNegocioBanco_RegistrarMoneda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarMonedaResponse" message="tns:ISWNegocioBanco_RegistrarMoneda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarOrdenPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarOrdenPago" message="tns:ISWNegocioBanco_RegistrarOrdenPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/RegistrarOrdenPagoResponse" message="tns:ISWNegocioBanco_RegistrarOrdenPago_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBanco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarBanco" message="tns:ISWNegocioBanco_ActualizarBanco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarBancoResponse" message="tns:ISWNegocioBanco_ActualizarBanco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSucursal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarSucursal" message="tns:ISWNegocioBanco_ActualizarSucursal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarSucursalResponse" message="tns:ISWNegocioBanco_ActualizarSucursal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarEstado" message="tns:ISWNegocioBanco_ActualizarEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarEstadoResponse" message="tns:ISWNegocioBanco_ActualizarEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMoneda">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarMoneda" message="tns:ISWNegocioBanco_ActualizarMoneda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarMonedaResponse" message="tns:ISWNegocioBanco_ActualizarMoneda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarOrdenPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarOrdenPago" message="tns:ISWNegocioBanco_ActualizarOrdenPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/ActualizarOrdenPagoResponse" message="tns:ISWNegocioBanco_ActualizarOrdenPago_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBanco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarBanco" message="tns:ISWNegocioBanco_EliminarBanco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarBancoResponse" message="tns:ISWNegocioBanco_EliminarBanco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSucursal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarSucursal" message="tns:ISWNegocioBanco_EliminarSucursal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarSucursalResponse" message="tns:ISWNegocioBanco_EliminarSucursal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarEstado" message="tns:ISWNegocioBanco_EliminarEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarEstadoResponse" message="tns:ISWNegocioBanco_EliminarEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMoneda">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarMoneda" message="tns:ISWNegocioBanco_EliminarMoneda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarMonedaResponse" message="tns:ISWNegocioBanco_EliminarMoneda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarOrdenPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarOrdenPago" message="tns:ISWNegocioBanco_EliminarOrdenPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWNegocioBanco/EliminarOrdenPagoResponse" message="tns:ISWNegocioBanco_EliminarOrdenPago_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISWNegocioBanco" type="tns:ISWNegocioBanco">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarBanco">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ConsultarBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSucursal">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ConsultarSucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarOrdenPago">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ConsultarOrdenPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMoneda">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ConsultarMoneda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstado">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ConsultarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarBanco">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/RegistrarBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSucursal">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/RegistrarSucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEstado">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/RegistrarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMoneda">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/RegistrarMoneda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarOrdenPago">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/RegistrarOrdenPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarBanco">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ActualizarBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSucursal">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ActualizarSucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstado">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ActualizarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMoneda">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ActualizarMoneda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarOrdenPago">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/ActualizarOrdenPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarBanco">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/EliminarBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSucursal">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/EliminarSucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstado">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/EliminarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMoneda">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/EliminarMoneda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarOrdenPago">
+      <soap:operation soapAction="http://tempuri.org/ISWNegocioBanco/EliminarOrdenPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SWNegocioBanco">
+    <wsdl:port name="BasicHttpBinding_ISWNegocioBanco" binding="tns:BasicHttpBinding_ISWNegocioBanco">
+      <soap:address location="http://localhost:59608/SWNegocioBanco.svc/soapService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

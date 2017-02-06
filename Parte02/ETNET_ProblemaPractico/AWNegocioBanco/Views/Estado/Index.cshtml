@@ -1,0 +1,46 @@
+﻿@model AWNegocioBanco.Models.EstadoViewModel
+
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Estado</h2>
+
+@*<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoEstado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Abreviatura)
+        </th>
+        @*<th></th>*@
+    </tr>
+
+@foreach (var item in Model.ListaEstado) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoEstado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Abreviatura)
+        </td>
+        @*<td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CodigoEstado }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.CodigoEstado */ }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.CodigoEstado })
+        </td>*@
+    </tr>
+}
+
+</table>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Request" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Response" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Response" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Request" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Response" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Request" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Response" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Request" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Response" />
+  <xs:element name="ConsultarBanco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Request" minOccurs="0" name="filtro" nillable="true" type="q1:BancoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarBancoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Response" minOccurs="0" name="ConsultarBancoResult" nillable="true" type="q2:BancoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSucursal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request" minOccurs="0" name="filtro" nillable="true" type="q3:SucursalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSucursalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Response" minOccurs="0" name="ConsultarSucursalResult" nillable="true" type="q4:SucursalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarOrdenPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Request" minOccurs="0" name="filtro" nillable="true" type="q5:OrdenPagoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarOrdenPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Response" minOccurs="0" name="ConsultarOrdenPagoResult" nillable="true" type="q6:OrdenPagoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMoneda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Request" minOccurs="0" name="filtro" nillable="true" type="q7:MonedaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMonedaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Response" minOccurs="0" name="ConsultarMonedaResult" nillable="true" type="q8:MonedaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Request" minOccurs="0" name="filtro" nillable="true" type="q9:EstadoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Response" minOccurs="0" name="ConsultarEstadoResult" nillable="true" type="q10:EstadoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarBanco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Request" minOccurs="0" name="filtro" nillable="true" type="q11:BancoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarBancoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Response" minOccurs="0" name="RegistrarBancoResult" nillable="true" type="q12:BancoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarSucursal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request" minOccurs="0" name="filtro" nillable="true" type="q13:SucursalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarSucursalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Response" minOccurs="0" name="RegistrarSucursalResult" nillable="true" type="q14:SucursalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Request" minOccurs="0" name="filtro" nillable="true" type="q15:EstadoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Response" minOccurs="0" name="RegistrarEstadoResult" nillable="true" type="q16:EstadoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarMoneda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Request" minOccurs="0" name="filtro" nillable="true" type="q17:MonedaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarMonedaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Response" minOccurs="0" name="RegistrarMonedaResult" nillable="true" type="q18:MonedaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarOrdenPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Request" minOccurs="0" name="filtro" nillable="true" type="q19:OrdenPagoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarOrdenPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Response" minOccurs="0" name="RegistrarOrdenPagoResult" nillable="true" type="q20:OrdenPagoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarBanco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Request" minOccurs="0" name="filtro" nillable="true" type="q21:BancoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarBancoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Response" minOccurs="0" name="ActualizarBancoResult" nillable="true" type="q22:BancoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarSucursal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request" minOccurs="0" name="filtro" nillable="true" type="q23:SucursalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarSucursalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Response" minOccurs="0" name="ActualizarSucursalResult" nillable="true" type="q24:SucursalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Request" minOccurs="0" name="filtro" nillable="true" type="q25:EstadoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Response" minOccurs="0" name="ActualizarEstadoResult" nillable="true" type="q26:EstadoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarMoneda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Request" minOccurs="0" name="filtro" nillable="true" type="q27:MonedaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarMonedaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Response" minOccurs="0" name="ActualizarMonedaResult" nillable="true" type="q28:MonedaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarOrdenPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Request" minOccurs="0" name="filtro" nillable="true" type="q29:OrdenPagoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarOrdenPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Response" minOccurs="0" name="ActualizarOrdenPagoResult" nillable="true" type="q30:OrdenPagoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarBanco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Request" minOccurs="0" name="filtro" nillable="true" type="q31:BancoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarBancoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/EntidadNegocio.Banco.Response" minOccurs="0" name="EliminarBancoResult" nillable="true" type="q32:BancoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarSucursal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request" minOccurs="0" name="filtro" nillable="true" type="q33:SucursalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarSucursalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Response" minOccurs="0" name="EliminarSucursalResult" nillable="true" type="q34:SucursalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Request" minOccurs="0" name="filtro" nillable="true" type="q35:EstadoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Response" minOccurs="0" name="EliminarEstadoResult" nillable="true" type="q36:EstadoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarMoneda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Request" minOccurs="0" name="filtro" nillable="true" type="q37:MonedaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarMonedaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/EntidadNegocio.Moneda.Response" minOccurs="0" name="EliminarMonedaResult" nillable="true" type="q38:MonedaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarOrdenPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Request" minOccurs="0" name="filtro" nillable="true" type="q39:OrdenPagoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarOrdenPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Response" minOccurs="0" name="EliminarOrdenPagoResult" nillable="true" type="q40:OrdenPagoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ENOrdenPago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoEstado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoMoneda" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoOrdenPago" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoSucursal" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaPago" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Sucursal" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ENOrdenPago" nillable="true" type="tns:ENOrdenPago" />
+  <xs:complexType name="ArrayOfENOrdenPago">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ENOrdenPago" nillable="true" type="tns:ENOrdenPago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfENOrdenPago" nillable="true" type="tns:ArrayOfENOrdenPago" />
+</xs:schema>

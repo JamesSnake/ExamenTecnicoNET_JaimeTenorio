@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago" />
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.General" />
+  <xs:complexType name="OrdenPagoResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/EntidadNegocio.General" base="q1:GeneralResponse">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EntidadNegocio.OrdenPago" minOccurs="0" name="ListaOrdenPago" nillable="true" type="q2:ArrayOfENOrdenPago" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrdenPagoResponse" nillable="true" type="tns:OrdenPagoResponse" />
+</xs:schema>

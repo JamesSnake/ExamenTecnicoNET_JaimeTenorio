@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:59608/SWNegocioBanco.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado" />
+  <xs:complexType name="EstadoRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/EntidadNegocio.Estado" base="q1:ENEstado">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EstadoRequest" nillable="true" type="tns:EstadoRequest" />
+</xs:schema>
