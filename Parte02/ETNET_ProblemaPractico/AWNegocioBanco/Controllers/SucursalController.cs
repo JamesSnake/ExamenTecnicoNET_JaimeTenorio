@@ -27,9 +27,39 @@ namespace AWNegocioBanco.Controllers
         }
 
         // GET: Sucursal/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Consulta()
         {
-            return View();
+            SWNegocioBanco.SWNegocioBancoClient WS = new SWNegocioBanco.SWNegocioBancoClient();
+            SucursalViewModel SucursalVW = new SucursalViewModel();
+            SucursalVW.ListaSucursal = new List<EntidadNegocio.Sucursal.ENSucursal>();
+            BancoResponse respuesta = new BancoResponse();
+            respuesta = WS.ConsultarBanco(new BancoRequest());
+            if (respuesta.CodigoError == 0)
+                SucursalVW.ListaBancoCombo = respuesta.ListaBanco.Select(e => new BancoViewModel { CodigoBanco = e.CodigoBanco, Nombre = e.Nombre }).ToList();
+
+            return View(SucursalVW);
+        }
+
+        [HttpPost]
+        public ActionResult Consulta(FormCollection collection)
+        {
+            SWNegocioBanco.SWNegocioBancoClient WS = new SWNegocioBanco.SWNegocioBancoClient();
+            SucursalViewModel SucursalVW = new SucursalViewModel();
+            SucursalResponse respuesta = new SucursalResponse();
+
+            if (!string.IsNullOrEmpty(collection["CodigoBanco"]))
+            {
+                respuesta = WS.ConsultarSucursal(new SucursalRequest { CodigoBanco = Int32.Parse(collection["CodigoBanco"])});
+                if (respuesta.CodigoError == 0)
+                    SucursalVW.ListaSucursal = respuesta.ListaSucursal;
+            }
+
+            BancoResponse respuestaBanco = new BancoResponse();
+            respuestaBanco = WS.ConsultarBanco(new BancoRequest());
+            if (respuestaBanco.CodigoError == 0)
+                SucursalVW.ListaBancoCombo = respuestaBanco.ListaBanco.Select(e => new BancoViewModel { CodigoBanco = e.CodigoBanco, Nombre = e.Nombre }).ToList();
+
+            return View(SucursalVW);
         }
 
         // GET: Sucursal/Create

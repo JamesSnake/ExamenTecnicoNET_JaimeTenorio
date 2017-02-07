@@ -9,7 +9,10 @@ using EntidadNegocio.Sucursal.Request;
 using EntidadNegocio.Sucursal.Response;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Runtime.Serialization.Json;
 using System.Web;
 using System.Web.Mvc;
 
@@ -31,9 +34,81 @@ namespace AWNegocioBanco.Controllers
         }
 
         // GET: OrdenPago/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Consulta()
         {
-            return View();
+            SWNegocioBanco.SWNegocioBancoClient WS = new SWNegocioBanco.SWNegocioBancoClient();
+            OrdenPagoViewModel OrdenPagoVW = new OrdenPagoViewModel();
+
+            OrdenPagoVW.ListaOrdenPago = new List<EntidadNegocio.OrdenPago.ENOrdenPago>();
+
+            SucursalResponse respuestaSucursal = new SucursalResponse();
+            respuestaSucursal = WS.ConsultarSucursal(new SucursalRequest());
+            if (respuestaSucursal.CodigoError == 0)
+                OrdenPagoVW.ListaSucursalCombo = respuestaSucursal.ListaSucursal.Select(e => new SucursalViewModel { CodigoSucursal = e.CodigoSucursal, Nombre = e.Nombre }).ToList();
+
+            MonedaResponse respuestaMoneda = new MonedaResponse();
+            respuestaMoneda = WS.ConsultarMoneda(new MonedaRequest());
+            if (respuestaMoneda.CodigoError == 0)
+                OrdenPagoVW.ListaMonedaCombo = respuestaMoneda.ListaMoneda.Select(e => new MonedaViewModel { CodigoMoneda = e.CodigoMoneda, Nombre = e.Nombre }).ToList(); ;
+
+            return View(OrdenPagoVW);
+        }
+
+        [HttpPost]
+        public ActionResult Consulta(FormCollection collection)
+        {
+            OrdenPagoViewModel OrdePagoVM = new OrdenPagoViewModel();
+            OrdenPagoRequest filtro = new OrdenPagoRequest();
+            string serviceURL = "http://localhost:59608/SWNegocioBanco.svc/ConsultarOrdenPago";
+            var request = (HttpWebRequest)WebRequest.Create(serviceURL);
+            request.Method = "POST"; request.ContentType = @"application/json; charset=utf-8";
+            string body;
+            DataContractJsonSerializer obj = new DataContractJsonSerializer(typeof(OrdenPagoRequest));
+            DataContractJsonSerializer respo = new DataContractJsonSerializer(typeof(OrdenPagoResponse));
+
+            if(!string.IsNullOrEmpty(collection["CodigoSucursal"]) && !string.IsNullOrEmpty(collection["CodigoMoneda"])) {
+                filtro = new OrdenPagoRequest
+                {
+                    CodigoSucursal = Int32.Parse(collection["CodigoSucursal"]),
+                    CodigoMoneda = Int32.Parse(collection["CodigoMoneda"])
+                };
+            }
+            using (var memoryStream = new MemoryStream())
+            using (var reader = new StreamReader(memoryStream)) {
+                obj.WriteObject(memoryStream, filtro);
+                memoryStream.Position = 0;
+                body = reader.ReadToEnd();
+            }
+
+            byte[] byteData = System.Text.UTF8Encoding.UTF8.GetBytes(body);
+            request.ContentLength = byteData.Length;
+
+            using (Stream postStream = request.GetRequestStream())
+            {
+                postStream.Write(byteData, 0, byteData.Length);
+            }
+
+            using (var response = request.GetResponse())
+            {
+                var stream = response.GetResponseStream();
+                var Response = (OrdenPagoResponse)respo.ReadObject(stream);
+                OrdePagoVM.ListaOrdenPago = Response.ListaOrdenPago;  
+            }
+
+            SWNegocioBanco.SWNegocioBancoClient WS = new SWNegocioBanco.SWNegocioBancoClient();
+
+            SucursalResponse respuestaSucursal = new SucursalResponse();
+            respuestaSucursal = WS.ConsultarSucursal(new SucursalRequest());
+            if (respuestaSucursal.CodigoError == 0)
+                OrdePagoVM.ListaSucursalCombo = respuestaSucursal.ListaSucursal.Select(e => new SucursalViewModel { CodigoSucursal = e.CodigoSucursal, Nombre = e.Nombre }).ToList();
+
+            MonedaResponse respuestaMoneda = new MonedaResponse();
+            respuestaMoneda = WS.ConsultarMoneda(new MonedaRequest());
+            if (respuestaMoneda.CodigoError == 0)
+                OrdePagoVM.ListaMonedaCombo = respuestaMoneda.ListaMoneda.Select(e => new MonedaViewModel { CodigoMoneda = e.CodigoMoneda, Nombre = e.Nombre }).ToList(); ;
+
+
+            return View(OrdePagoVM);
         }
 
         // GET: OrdenPago/Create

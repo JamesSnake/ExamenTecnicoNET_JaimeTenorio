@@ -1,0 +1,60 @@
+﻿@model AWNegocioBanco.Models.SucursalViewModel
+
+@{
+    ViewBag.Title = "Consulta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consulta</h2>
+
+@using (Html.BeginForm("Consulta", "Sucursal", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Criterios de búsqueda</legend>
+        @Html.Label("buscar", "Banco:")
+        @Html.DropDownListFor(model => model.CodigoBanco, new SelectList(Model.ListaBancoCombo, "CodigoBanco", "Nombre") as SelectList, "Seleccione", new { htmlAttributes = new { @class = "form-control" } })
+
+        <input type="submit" value="Buscar" />
+    </fieldset>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoSucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Banco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+    </tr>
+
+@foreach (var item in Model.ListaSucursal) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoSucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Banco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+    </tr>
+}
+
+</table>

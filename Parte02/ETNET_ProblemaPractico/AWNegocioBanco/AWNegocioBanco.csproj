@@ -334,6 +334,8 @@
     <Content Include="Views\Sucursal\Delete.cshtml" />
     <Content Include="Views\OrdenPago\Edit.cshtml" />
     <Content Include="Views\OrdenPago\Delete.cshtml" />
+    <Content Include="Views\OrdenPago\Consulta.cshtml" />
+    <Content Include="Views\Sucursal\Consulta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

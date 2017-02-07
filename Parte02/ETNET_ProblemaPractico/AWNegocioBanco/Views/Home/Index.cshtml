@@ -3,7 +3,7 @@
 }
 
 <div class="jumbotron">
-    <h1>Entidades del Sistema</h1>
+    <div>Entidades del Sistema</div>
     <ul class="list-group">
         <li href="#" class="list-group-item-info">@Html.ActionLink("Bancos", "Index", "Banco")</li>
         <li href="#" class="list-group-item-info">@Html.ActionLink("Sucursales", "Index", "Sucursal")</li>
@@ -13,6 +13,11 @@
     <ul class="list-group">
         <li href="#" class="list-group-item-success">@Html.ActionLink("Moneda", "Index", "Moneda")</li>
         <li href="#" class="list-group-item-success">@Html.ActionLink("Estado", "Index", "Estado")</li>
+    </ul>
+    <div>Consumo Servicios</div>
+    <ul class="list-group">
+        <li href="#" class="list-group-item-success">@Html.ActionLink("Orden Pago JSON", "Consulta", "OrdenPago")</li>
+        <li href="#" class="list-group-item-success">@Html.ActionLink("Sucursales XML", "Consulta", "Sucursal")</li>
     </ul>
 </div>
 
