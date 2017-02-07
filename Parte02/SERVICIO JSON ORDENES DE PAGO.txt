@@ -1,0 +1,33 @@
+Url: http://localhost:59608/SWNegocioBanco.svc/ConsultarOrdenPago
+
+Request:
+
+{
+	"CodigoEstado":2147483647,
+	"CodigoMoneda":2147483647,
+	"CodigoOrdenPago":2147483647,
+	"CodigoSucursal":2147483647,
+	"Estado":"Contenido de la cadena",
+	"FechaPago":"\/Date(928167600000-0500)\/",
+	"Moneda":"Contenido de la cadena",
+	"Monto":12678967.543233,
+	"Sucursal":"Contenido de la cadena"
+}
+
+Response:
+
+{
+	"CodigoError":2147483647,
+	"DescripcionError":"Contenido de la cadena",
+	"ListaOrdenPago":[{
+		"CodigoEstado":2147483647,
+		"CodigoMoneda":2147483647,
+		"CodigoOrdenPago":2147483647,
+		"CodigoSucursal":2147483647,
+		"Estado":"Contenido de la cadena",
+		"FechaPago":"\/Date(928167600000-0500)\/",
+		"Moneda":"Contenido de la cadena",
+		"Monto":12678967.543233,
+		"Sucursal":"Contenido de la cadena"
+	}]
+}
