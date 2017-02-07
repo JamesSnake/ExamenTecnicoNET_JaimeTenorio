@@ -1,0 +1,37 @@
+Url: http://localhost:59608/SWNegocioBanco.svc?wsdl
+
+Request:
+
+<SucursalRequest xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Request">
+  <Banco xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal">Contenido de la cadena</Banco>
+  <CodigoBanco xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal">2147483647</CodigoBanco>
+  <CodigoSucursal xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal">2147483647</CodigoSucursal>
+  <Direccion xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal">Contenido de la cadena</Direccion>
+  <FechaRegistro xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal">1999-05-31T11:20:00</FechaRegistro>
+  <Nombre xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal">Contenido de la cadena</Nombre>
+</SucursalRequest>
+
+Response:
+
+<SucursalResponse xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal.Response">
+  <CodigoError xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.General">2147483647</CodigoError>
+  <DescripcionError xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.General">Contenido de la cadena</DescripcionError>
+  <ListaSucursal>
+    <ENSucursal xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal">
+      <Banco>Contenido de la cadena</Banco>
+      <CodigoBanco>2147483647</CodigoBanco>
+      <CodigoSucursal>2147483647</CodigoSucursal>
+      <Direccion>Contenido de la cadena</Direccion>
+      <FechaRegistro>1999-05-31T11:20:00</FechaRegistro>
+      <Nombre>Contenido de la cadena</Nombre>
+    </ENSucursal>
+    <ENSucursal xmlns="http://schemas.datacontract.org/2004/07/EntidadNegocio.Sucursal">
+      <Banco>Contenido de la cadena</Banco>
+      <CodigoBanco>2147483647</CodigoBanco>
+      <CodigoSucursal>2147483647</CodigoSucursal>
+      <Direccion>Contenido de la cadena</Direccion>
+      <FechaRegistro>1999-05-31T11:20:00</FechaRegistro>
+      <Nombre>Contenido de la cadena</Nombre>
+    </ENSucursal>
+  </ListaSucursal>
+</SucursalResponse>
