@@ -1,0 +1,64 @@
+﻿@model AWNegocioBanco.Models.SucursalViewModel
+
+@{
+    ViewBag.Title = "ListaMaster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListaMaster</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoSucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoBanco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Banco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th>Accion</th>
+    </tr>
+
+@foreach (var item in Model.ListaSucursal) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoSucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoBanco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Banco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+@Ajax.ActionLink("Seleecione", "ListaOrdenSucursal", "OrdenPago", new { idSucursal = item.CodigoSucursal }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "divOrdenPagoSucursal" });
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })*@ 
+
+        </td>
+    </tr>
+}
+
+</table>
+
+<h3>Ordenes de Pago por Sucursal</h3>
+<div id="divOrdenPagoSucursal"></div>

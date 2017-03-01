@@ -214,6 +214,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -336,6 +338,9 @@
     <Content Include="Views\OrdenPago\Delete.cshtml" />
     <Content Include="Views\OrdenPago\Consulta.cshtml" />
     <Content Include="Views\Sucursal\Consulta.cshtml" />
+    <Content Include="Views\Sucursal\ListaMaster.cshtml" />
+    <Content Include="Views\OrdenPago\ListaOrdenSucursal.cshtml" />
+    <Content Include="Views\Banco\Creacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

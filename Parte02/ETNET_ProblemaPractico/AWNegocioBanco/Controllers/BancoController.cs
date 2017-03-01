@@ -119,5 +119,35 @@ namespace AWNegocioBanco.Controllers
                 return View();
             }
         }
+
+        public ActionResult Creacion(BancoViewModel modelo)
+        {
+            modelo = new Models.BancoViewModel();
+            return View(modelo);
+        }
+
+        // POST: Banco/Create
+        [HttpPost]
+        public ActionResult Creacion(BancoViewModel modelo, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add insert logic here
+                SWNegocioBanco.SWNegocioBancoClient WS = new SWNegocioBanco.SWNegocioBancoClient();
+                BancoResponse respuesta = new BancoResponse();
+                respuesta = WS.RegistrarBanco(new BancoRequest
+                {
+                    Nombre = modelo.Nombre,
+                    Direccion = modelo.Direccion,
+                    FechaRegistro = modelo.FechaRegistro
+                });
+                //if (respuesta.CodigoError == 0)     
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

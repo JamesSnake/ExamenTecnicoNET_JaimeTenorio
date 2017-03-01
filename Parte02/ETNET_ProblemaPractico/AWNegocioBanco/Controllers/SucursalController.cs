@@ -166,5 +166,18 @@ namespace AWNegocioBanco.Controllers
                 return View();
             }
         }
+
+        public ActionResult ListaMaster()
+        {
+            SWNegocioBanco.SWNegocioBancoClient WS = new SWNegocioBanco.SWNegocioBancoClient();
+            SucursalViewModel SucursalVW = new SucursalViewModel();
+            SucursalResponse respuesta = new SucursalResponse();
+            respuesta = WS.ConsultarSucursal(new SucursalRequest());
+            if (respuesta.CodigoError == 0)
+                SucursalVW.ListaSucursal = respuesta.ListaSucursal;
+
+            return View(SucursalVW);
+        }
+
     }
 }

@@ -241,5 +241,16 @@ namespace AWNegocioBanco.Controllers
                 return View();
             }
         }
+
+        public ActionResult ListaOrdenSucursal(int idSucursal) {
+            SWNegocioBanco.SWNegocioBancoClient WS = new SWNegocioBanco.SWNegocioBancoClient();
+            OrdenPagoViewModel OrdenPagoVW = new OrdenPagoViewModel();
+            OrdenPagoResponse respuesta = new OrdenPagoResponse();
+            respuesta = WS.ConsultarOrdenPago(new OrdenPagoRequest() { CodigoSucursal = idSucursal });
+            if (respuesta.CodigoError == 0)
+                OrdenPagoVW.ListaOrdenPago = respuesta.ListaOrdenPago;
+
+            return PartialView(OrdenPagoVW);
+        }
     }
 }
